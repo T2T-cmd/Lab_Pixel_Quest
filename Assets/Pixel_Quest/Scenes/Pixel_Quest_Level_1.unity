@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 284054332}
   - component: {fileID: 284054331}
   - component: {fileID: 284054330}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 655751967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.6785, y: -5.0491, z: 0}
+  m_LocalPosition: {x: 18.673, y: -5.0491, z: 0}
   m_LocalScale: {x: 2.4251, y: 2.5353, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1297,6 +1297,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &718033713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718033714}
+  m_Layer: 0
+  m_Name: FeetCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718033714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718033713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: -0.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874848279}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &943592422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1831,7 @@ GameObject:
   - component: {fileID: 1259812106}
   - component: {fileID: 1259812105}
   - component: {fileID: 1259812104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5548,6 +5579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874848279}
   - component: {fileID: 1874848280}
+  - component: {fileID: 1874848283}
   - component: {fileID: 1874848282}
   - component: {fileID: 1874848281}
   m_Layer: 0
@@ -5571,6 +5603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 150935942}
+  - {fileID: 718033714}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1874848280
@@ -5658,6 +5691,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1874848283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874848278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd8c96b01bd0e042adbc3ad1ebd2509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpforce: 10
+  feetCollider: {fileID: 718033714}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1884485327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,7 +5723,7 @@ GameObject:
   - component: {fileID: 1884485331}
   - component: {fileID: 1884485330}
   - component: {fileID: 1884485329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloatingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
