@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90c308edfd550e45bc3c1eab36cb3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   deathTime: 1.5
   playerBullet: 1
 --- !u!1 &8462168158812703723
