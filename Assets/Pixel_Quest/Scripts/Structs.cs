@@ -15,7 +15,7 @@ public class Structs
     {
         public const string heartImage = "HeartImage";
         public const string coinText = "cointext";
-        public const string coins = "coin";
+        public const string coins = "Coin";
     }
 
 
