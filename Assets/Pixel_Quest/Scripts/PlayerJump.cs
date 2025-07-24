@@ -44,7 +44,7 @@ public class PlayerJump : MonoBehaviour
 
     }
 
-    private void OnTriggerExit(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.tag == "Water")
         {
