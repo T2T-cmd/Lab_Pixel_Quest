@@ -256,6 +256,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89231793}
   m_CullTransparentMesh: 1
+--- !u!1 &348497279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348497281}
+  - component: {fileID: 348497280}
+  m_Layer: 0
+  m_Name: Game Con
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &348497280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348497279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90026c305e2fb8e4aa0df67a4ea32747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScene: level_1
+--- !u!4 &348497281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348497279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 483.48145, y: 158.78267, z: -2.2583718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360373620
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +446,7 @@ GameObject:
   - component: {fileID: 481233738}
   - component: {fileID: 481233741}
   - component: {fileID: 481233740}
+  - component: {fileID: 481233742}
   - component: {fileID: 481233739}
   m_Layer: 5
   m_Name: Start Button
@@ -472,7 +518,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 481233740}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348497280}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &481233740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +569,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481233737}
   m_CullTransparentMesh: 1
+--- !u!114 &481233742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481233737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90026c305e2fb8e4aa0df67a4ea32747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScene: 
 --- !u!1 &639174301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1232,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2003866264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348497280}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2003866264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,3 +1291,4 @@ SceneRoots:
   - {fileID: 1292337147}
   - {fileID: 1521527717}
   - {fileID: 1314865374}
+  - {fileID: 348497281}
